@@ -16,3 +16,9 @@ RUN chmod 700 /srv/jupyterhub/secrets && \
     chmod 600 /srv/jupyterhub/secrets/*
 
 COPY ./userlist /srv/jupyterhub/userlist
+
+RUN groupadd -g 1234 data
+RUN useradd -u 54321 -g data airflow && \
+    useradd -u 1001 -g data -mp '$6$S9uait0NDbA.eZsw$dAND65UAEKLagqpd63R/nJTgZCAUxs2vpS2oGCJ5QMMaitafrUgUQ.wdurSPv2yK9t7QUeNmnYTUYP8HLin26/' moises
+
+

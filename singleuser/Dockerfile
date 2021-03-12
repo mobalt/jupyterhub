@@ -1,6 +1,7 @@
 ARG DOCKER_NOTEBOOK_IMAGE
 FROM $DOCKER_NOTEBOOK_IMAGE
 ARG JUPYTERHUB_VERSION
+ENV JUPYTER_ENABLE_LAB=1
 RUN python3 -m pip install --no-cache jupyterhub==$JUPYTERHUB_VERSION
 
 # https://github.com/takluyver/bash_kernel

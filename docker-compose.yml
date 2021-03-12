@@ -51,6 +51,7 @@ services:
       # Postgres db info
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_HOST: hub-db
+      JUPYTER_ENABLE_LAB: 1
     env_file:
       - secrets/postgres.env
       - secrets/oauth.env
